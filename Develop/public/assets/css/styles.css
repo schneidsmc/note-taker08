@@ -4,10 +4,10 @@ body {
   margin: 0;
   padding: 0;
 }
-
+/* 
 .save-note, .new-note, .clear-btn {
   display: none;
-}
+} */
 
 .icons {
   margin-left: 15px;

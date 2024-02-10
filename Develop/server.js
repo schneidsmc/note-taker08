@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const express = ('express')
+const express = require('express')
 const app = express()
 const db = require('./db/db.json')
 
@@ -31,7 +31,7 @@ app.get('/api/notes', (req, res) => {
 
 // POST
 
-app.post('/api.notes', (req, res) => {
+app.post('/api/notes', (req, res) => {
     
     const newNote = req.body
 
@@ -59,15 +59,15 @@ app.delete('/api/notes/:id', (req, res) => {
 
 // HOME
 app.get('/', (req, res) => {
-    res.sendFile(path.joing(__dirname, 'index.html'))
+    res.sendFile(path.join(__dirname, 'index.html'))
 })
 // NOTES
 app.get('/notes', (req, res) => {
-    res.sendFile(path.joing(__dirname, 'notes.html'))
+    res.sendFile(path.join(__dirname, 'notes.html'))
 })
 // WILDCARD
 app.get('*', (req, res) => {
-    res.sendFile(path.joing(__dirname, 'index.html'))
+    res.sendFile(path.join(__dirname, 'index.html'))
 })
 
 
