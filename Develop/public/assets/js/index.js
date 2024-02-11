@@ -1,4 +1,5 @@
 
+
 let noteForm;
 let noteTitle;
 let noteText;
@@ -55,8 +56,8 @@ const deleteNote = (id) =>
   });
 
 const renderActiveNote = () => {
-  hide(saveNoteBtn);
-  hide(clearBtn);
+  show(saveNoteBtn);
+  show(clearBtn);
 
   if (activeNote.id) {
     show(newNoteBtn);
