@@ -1,5 +1,4 @@
 
-
 let noteForm;
 let noteTitle;
 let noteText;
@@ -56,9 +55,9 @@ const deleteNote = (id) =>
   });
 
 const renderActiveNote = () => {
-  show(saveNoteBtn);
-  show(clearBtn);
-
+  hide(saveNoteBtn);
+  hide(clearBtn);
+console.log('taking a note')
   if (activeNote.id) {
     show(newNoteBtn);
     noteTitle.setAttribute('readonly', true);
@@ -127,6 +126,7 @@ const handleRenderBtns = () => {
   } else {
     show(saveNoteBtn);
   }
+  console.log('taking note')
 };
 
 // Render the list of note titles

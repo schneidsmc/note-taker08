@@ -59,18 +59,19 @@ app.delete('/api/notes/:id', (req, res) => {
 
 // HOME
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'))
+    res.sendFile(path.join(__dirname, './public/index.html'))
 })
 // NOTES
 app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, 'notes.html'))
+    res.sendFile(path.join(__dirname, './public/notes.html'))
 })
 // WILDCARD
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'))
+    res.sendFile(path.join(__dirname, './public/index.html'))
 })
 
 
 // Listen.
 app.listen(PORT, () =>
 console.log(`App listening on ${PORT}`))
+ 
