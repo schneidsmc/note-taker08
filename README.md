@@ -20,7 +20,7 @@
 
 This project has been built to record notes with descriptions into a json database. These notes will then display in a list style with the option to delete the note when the task is finished. 
 
-This was created using HTML,CSS,Markdown,Javascript,JQuery,NodeJS.
+This was created using HTML,CSS,Markdown,Javascript,JQuery,NodeJS. Insomnia was used to check the GET/POST/DELETE callbacks. Heroku as well as Git Hub Pages were utilized for live deployment.
 
 ## Table of Contents 
 
@@ -52,7 +52,8 @@ GIVEN a note-taking application:
 
 - What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 
-this project can be cloned using git commands in the integrated terminal
+This project can be cloned using git commands in the integrated terminal
+`git clone https://github.com/schneidsmc/note-taker09.git`
 
 ## Usage 🏁
 
@@ -62,9 +63,7 @@ Open the project in the live server and interact with the save, clear and delete
 
 ## Demonstration
 
-Click [here]( ) to view the demonstration on youtube.com.
-
-<img src="" alt="gif demonstration" width="300" height="auto">
+<img src="./Develop/demonstration.gif" alt="gif demonstration" width="300" height="auto">
 
 ## Author 👋🏽
 
