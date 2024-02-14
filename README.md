@@ -7,6 +7,8 @@
   <img src="https://img.shields.io/github/languages/top/schneidsmc/note-taker09" />
   <img src="https://img.shields.io/github/last-commit/schneidsmc/note-taker09" />
 
+<br />
+
   <img src="https://img.shields.io/badge/Javascript-yellow" />
   <img src="https://img.shields.io/badge/jQuery-blue"  />
   <img src="https://img.shields.io/badge/-node.js-green" />
