@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const express = require('express')
 const app = express()
-const db = require('./db/db.json')
+
 
 const PORT = process.env.PORT || 3000
 
@@ -32,27 +32,32 @@ app.get('/api/notes', (req, res) => {
 // POST
 
 app.post('/api/notes', (req, res) => {
+    fs.readFile('./db/db.json', 'utf8', (err, data) => {
+        const newNote = req.body
+        console.log(newNote)
+        // Creates id in object with randomized id
+        newNote.id = uuidv4()
     
-    const newNote = req.body
+        data = JSON.parse(data)
+        data.push(newNote)
+    
+        fs.writeFileSync('./db/db.json', JSON.stringify(data))
+    
+        res.json(data)
+    })
 
-    // Creates id in object with randomized id
-    newNote.id = uuidv4()
 
-    db.push(newNote)
-
-    fs.writeFileSync('./db/db.json', JSON.stringify(db))
-
-    res.json(db)
+    
 
 })
 
 // DELETE
-app.delete('/api/notes/:id', (req, res) => {
-    const baseNew = db.filter((note) => note.id !== req.params.id)
-
-    fs.writeFileSync('./db/db.json', JSON.stringify(baseNew))
-
-    fs.readFile.json(baseNew)
+app.delete('/api/notes/:id', (req, res) => { 
+    fs.readFile('./db/db.json', 'utf8', (err, data) => { console.log(data)
+    const baseNew = JSON.parse(data).filter((note) => note.id !== req.params.id)
+    const sync = fs.writeFileSync(path.join(process.cwd(), '/db/db.json'), JSON.stringify(baseNew), 'utf8')
+    res.json(200)
+    });
 })
 
 // HTML ROUTES
@@ -73,5 +78,5 @@ app.get('*', (req, res) => {
 
 // Listen.
 app.listen(PORT, () =>
-console.log(`App listening on ${PORT}`))
+console.log(`App listening on http://localhost:${PORT}`))
  
