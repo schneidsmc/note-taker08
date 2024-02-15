@@ -22,7 +22,7 @@
 
 This project has been built to record notes with descriptions into a json database. These notes will then display in a list style with the option to delete the note when the task is finished. 
 
-This was created using HTML,CSS,Markdown,Javascript,JQuery,NodeJS. Insomnia and Postman were used to check the GET/POST/DELETE callbacks. Heroku as well as Git Hub Pages were utilized for live deployment.
+This was created using HTML,CSS,Markdown,Javascript,JQuery,NodeJS. Insomnia and Postman were used to check the GET/POST/DELETE callbacks. Heroku has been utilized for live deployment.
 
 ## Table of Contents 
 
@@ -66,6 +66,10 @@ In the integrated terminal, a user can type `npm start` to initiate the port to 
 Provide instructions and examples for use.
 
 Open the project in the live server and interact with the save, clear and delete buttons. The buttons are used to correctly display or remove the input from the user which is stored in a database. 
+
+The deployed site on heroku is at the below link.
+
+[https://fast-anchorage-41497-26435ed16db6.herokuapp.com/](https://fast-anchorage-41497-26435ed16db6.herokuapp.com/)
 
 ## Demonstration
 
