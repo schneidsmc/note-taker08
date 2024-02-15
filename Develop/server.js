@@ -3,12 +3,10 @@ const path = require('path')
 const express = require('express')
 const app = express()
 
-
 const PORT = process.env.PORT || 3000
 
 // Creates id for each
 const { v4 : uuidv4 } = require('uuid');
-
 
 // Public folder access
 app.use(express.static('public'))
@@ -30,7 +28,6 @@ app.get('/api/notes', (req, res) => {
 })
 
 // POST
-
 app.post('/api/notes', (req, res) => {
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
         const newNote = req.body
@@ -45,11 +42,7 @@ app.post('/api/notes', (req, res) => {
     
         res.json(data)
     })
-
-
-    
-
-})
+});
 
 // DELETE
 app.delete('/api/notes/:id', (req, res) => { 
